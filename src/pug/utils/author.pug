@@ -1,0 +1,9 @@
+mixin author(photo,name,nickname,profession, desc)
+    .author 
+        .author__photo.photo(style=`background-image:url(${photo});`)
+        .author__bio 
+            p.author__title.title=name
+            p.author__nickname.nickname=nickname
+            br
+            p.author__profession.profession=profession
+            p.author__desc.desc=desc

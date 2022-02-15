@@ -1,0 +1,35 @@
+include ../utils/piclistItem.pug
+include ../utils/author.pug
+-const Cats = require('../../js/cats.js').default;
+-const Authors = require('../../js/authors.js').default;
+section.main
+    .cats
+        p.cats__title.title Звуковой дизайн
+        p.cats__desc.desc Мы молодцы и вы молодцы, давайте вместе будем молодцами
+        .cats__piclist.piclist
+            each item in Cats
+                +piclistItem(item.img,item.title,item.desc,item.color)
+    .samples 
+        p.samples__title.title Наши проекты
+        .samples__section
+            .samples__section_youtube 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLn9glGTcMUe_pGagJb2nPnlZJrXMhCCSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            .samples__embedText
+                .samples__embedDesc.desc
+                    p.samples__embedTitle.title Как мы работаем?
+                    ol 
+                        li Тщательно ознакомимся с вашим техническим заданием.
+                        li Изучим все ваши предпочтения и проведём анализ референсных работ.
+                        li В ходе работы будем поддерживать связь и вносить требуемые правки.
+                    br
+                    br
+                    |Кроме того, вы в любой момент можете узнать как идёт работа над вашим проектом.
+        .samples__section
+            .samples__embedText 
+                p.samples__embedDesc.desc Примеры композиций и озвученных нами анимационных роликов вы можете прослушать в прикреплённом #[a(style="color:#ff0000;" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCuPgOiqv2KqsNHMUNz98X2A") Youtube] и #[a(style="color:#ff4500;" target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/veniamin-stroganov") SoundCloud] плейлистах! <br><br><br>Обратите внимание, что мы выкладываем туда только некоммерческие проекты, так что вы можете быть спокойны за то, что ваш проект не будет представлен здесь без вашего согласия.
+            .samples__section_sc
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/339114095&color=%232c2718&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/mad-house-19" title="Mad House" target="_blank" style="color: #cccccc; text-decoration: none;">Mad House</a> · <a href="https://soundcloud.com/mad-house-19/sets/weed" title="Weed" target="_blank" style="color: #cccccc; text-decoration: none;">Weed</a></div>  
+    .about
+        p.about__title.title О нас
+        each item in Authors
+            +author(item.photo,item.name,item.nickname,item.profession,item.desc)

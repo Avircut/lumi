@@ -1,0 +1,6 @@
+mixin piclistItem(img,title,desc,color)
+    .piclist__catitem.catitem(style=`color:${color};`)
+        .piclist__icon.icon(style=`background-image:url(${img});`) 
+        p.piclist__title.title=title 
+        p.piclist__desc.desc=desc
+    
