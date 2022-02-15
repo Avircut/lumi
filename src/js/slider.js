@@ -89,10 +89,10 @@ export default class SliderElement {
     const newblur = document.querySelector('.banner_in>.banner_blur');
     newblur.style.opacity = 0;
     setTimeout(() => {
-      const title = document.querySelector('.banner__title');
-      title.innerHTML = `${this.slides.titles[this.currentSlide]}`;
-      const desc = document.querySelector('.banner__desc');
-      desc.innerHTML = `${this.slides.desc[window.currentSlide]}`;
+      const title = newblur.querySelector('.banner__title');
+      title.textContent = `${this.slides.titles[this.currentSlide]}`;
+      const desc = newblur.querySelector('.banner__desc');
+      desc.innerHTML = `${this.slides.desc[this.currentSlide]}`;
     }, 100);
     this.ImageMove(newBanner, '0', 350);
     this.replaceEl(banner, newBanner, 1400);
