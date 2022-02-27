@@ -1,6 +1,5 @@
 import './css/normalize.css';
 import './css/styles.scss';
-import './babel';
 import './js/form';
 import SliderElement from './js/slider';
 
@@ -51,6 +50,8 @@ btn.addEventListener('click', () => {
   const body = document.querySelector('body');
   body.appendChild(wrapper);
   const form = document.querySelector('.form');
+  wrapper.style.opacity = '1';
+  wrapper.style.transition = '.5s opacity';
   form.style.display = 'flex';
   form.style.opacity = '1';
   body.style.overflowY = 'hidden';

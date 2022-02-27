@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const fs = require('fs')
-const anime = require('animejs')
+const autoprefixer = require('autoprefixer')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -96,7 +96,17 @@ module.exports = {
             },
             {
                 test:/\.(s[ac]ss)$/,
-                use:[MiniCssExtractPlugin.loader,'css-loader','sass-loader']
+                use:[MiniCssExtractPlugin.loader,'css-loader',
+                {
+                    loader: 'postcss-loader',
+                    options:{
+                        postcssOptions:{
+                            plugins:[
+                                autoprefixer
+                            ]
+                        }
+                    }
+                },'sass-loader']
             },
             {
                 test:/\.js$/,

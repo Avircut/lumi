@@ -11,5 +11,5 @@ class Author {
 }
 const Authors = [ // Сюда добавляем авторов
   new Author(lumigate, 'Вениамин Строганов', 'Lumigate', 'Аранжировщик | Саунд-дизайнер', 'Мультижанровый музыкант. Занимаюсь Ghost Production на крупнейшей площадке мира. Выпускаю музыку под псевдонимами "Lumigate" и "FAIL-NOT" (дуэт).\n\nОсновное предпочтение отдаю электронно-танцевальной музыке, а именно bass-музыке, также создаю саунд дизайн для брендов, рекламных и анимационных роликов.'),
-  new Author(lumigate, 'Вячеслав Ломов', 'Avircut', 'Разработчик', 'Кайфово делаем, на чилле на расслабоне, туда кнопочку, туда строчку, туда блочок, хоп-хоп и сайт готов. \n\n Могу ебнуть на пангольере катку в дотке, если интересно. Если не интересно могу уебать вам, мне не принципиально.')];
+  new Author(lumigate, 'Вячеслав Ломов', 'Avircut', 'Разработчик', 'Exercitation sint eiusmod elit ipsum aute dolor ex pariatur laborum aliquip. In est non quis magna reprehenderit deserunt qui fugiat excepteur culpa laboris enim. Aute sit nostrud magna dolor labore ad quis cillum laborum eiusmod non non non.')];
 export default Authors;
